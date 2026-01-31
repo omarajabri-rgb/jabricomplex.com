@@ -4,69 +4,153 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jabri Industrial Complex</title>
+
   <style>
     :root{
-      --bg:#0b0f14; --card:#121826; --text:#e8eef7; --muted:#a9b4c0;
-      --accent:#c9a46b; --border:rgba(255,255,255,.08);
+      --bg:#ffffff;
+      --card:#f6f7f9;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --accent:#c9a46b;
+      --border:#e5e7eb;
     }
+
     *{ box-sizing:border-box; }
-    body{ margin:0; font-family:Arial,Helvetica,sans-serif; background:linear-gradient(180deg,#0b0f14,#0e1624); color:var(--text); line-height:1.7; }
-    .wrap{ max-width:1000px; margin:0 auto; padding:28px 20px 70px; }
-    .nav{ display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin:10px 0 26px; }
-    .nav a{ text-decoration:none; color:var(--text); border:1px solid var(--border); padding:10px 14px; border-radius:999px; }
-    .nav a:hover{ border-color:rgba(255,255,255,.18); }
-    header{ text-align:center; padding:24px 0 18px; }
-    header img{ max-width:260px; margin-bottom:14px; }
-    header h1{ margin:0; font-size:2.1rem; letter-spacing:.4px; }
-    header p{ margin:10px 0 0; color:var(--muted); font-size:1.05rem; }
-    section{ background:var(--card); border:1px solid var(--border); border-radius:14px; padding:30px; margin-bottom:26px; box-shadow:0 10px 25px rgba(0,0,0,.35); }
-    h2{ margin:0 0 12px; color:var(--accent); font-size:1.35rem; }
-    .layout-img{ width:100%; border-radius:12px; margin-top:10px; }
-    .note{ color:var(--muted); font-size:.92rem; margin-top:10px; }
-    footer{ text-align:center; color:var(--muted); margin-top:44px; font-size:.9rem; }
-    .cta{ display:flex; gap:12px; flex-wrap:wrap; margin-top:14px; }
-    .btn{ display:inline-block; text-decoration:none; padding:12px 16px; border-radius:10px; border:1px solid var(--border); color:var(--text); }
-    .btn.primary{ background:rgba(201,164,107,.12); border-color:rgba(201,164,107,.35); }
+
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.7;
+    }
+
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:30px 20px 70px;
+    }
+
+    .nav{
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      margin-bottom:30px;
+    }
+
+    .nav a{
+      text-decoration:none;
+      color:var(--text);
+      padding:10px 16px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      font-weight:500;
+    }
+
+    .nav a:hover{
+      background:#f1f1f1;
+    }
+
+    header{
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    header img{
+      max-width:260px;
+      margin-bottom:20px;
+    }
+
+    header h1{
+      margin:0;
+      font-size:2.2rem;
+    }
+
+    header p{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:1.05rem;
+    }
+
+    section{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:32px;
+      margin-bottom:28px;
+    }
+
+    h2{
+      margin-top:0;
+      color:var(--accent);
+      font-size:1.4rem;
+    }
+
+    .layout-img{
+      width:100%;
+      border-radius:12px;
+      margin-top:15px;
+    }
+
+    .note{
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:10px;
+    }
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      margin-top:50px;
+      font-size:0.9rem;
+    }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
-    </nav>
+<div class="wrap">
 
-    <header>
-      <img src="logo complex.png" alt="Jabri Industrial Complex Logo">
-      <h1>Jabri Industrial Complex</h1>
-      <p>Industrial • Commercial • Storage Units for Rent</p>
-    </header>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
 
-    <section>
-      <h2>Project Layout (Concept Drawing)</h2>
-      <img src="jabri complex image.jpeg" alt="Architectural Planning Sketch" class="layout-img">
-      <div class="note">
-        Conceptual architectural planning sketch illustrating the layout and organization of Jabri Industrial Complex.
-        Image shown for planning and presentation purposes only.
-      </div>
-    </section>
+  <header>
+    <img src="logo complex.png" alt="Jabri Industrial Complex Logo">
+    <h1>Jabri Industrial Complex</h1>
+    <p>Industrial • Commercial • Storage Units for Rent</p>
+  </header>
 
-    <section>
-      <h2>Quick Overview</h2>
-      <p>
-        Jabri Industrial Complex provides secure and well-organized industrial, commercial, and storage units in Amman, Jordan.
-        Suitable for workshops, mechanics, electricians, light manufacturing, and storage businesses.
-      </p>
-      <div class="cta">
-        <a class="btn primary" href="about.html">Learn more</a>
-        <a class="btn" href="contact.html">Get in touch</a>
-      </div>
-    </section>
+  <section>
+    <h2>Project Layout (Concept Drawing)</h2>
+    <img src="jabri complex image.jpeg" class="layout-img" alt="Project Layout">
+    <div class="note">
+      Conceptual architectural planning sketch for presentation purposes.
+    </div>
+  </section>
 
-    <footer>© Jabri Industrial Complex – All rights reserved</footer>
-  </div>
+  <section>
+    <h2>About the Complex</h2>
+    <p>
+      Jabri Industrial Complex provides industrial, commercial, and storage
+      units for rent in Amman, Jordan. The complex is designed to support
+      workshops, mechanics, electricians, and small businesses within a
+      professional and organized environment.
+    </p>
+  </section>
+
+  <section>
+    <h2>Location</h2>
+    <p>Amman – Jordan</p>
+  </section>
+
+  <footer>
+    © Jabri Industrial Complex – All rights reserved
+  </footer>
+
+</div>
+
 </body>
 </html>
-
