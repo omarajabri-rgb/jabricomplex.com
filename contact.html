@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | Jabri Industrial Complex</title>
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#121826; --text:#e8eef7;
+      --muted:#a9b4c0; --accent:#c9a46b; --border:rgba(255,255,255,.08);
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#0b0f14,#0e1624);
+      color:var(--text);
+      line-height:1.7;
+    }
+    .wrap{ max-width:1000px; margin:0 auto; padding:28px 20px 70px; }
+    .nav{ display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin:10px 0 26px; }
+    .nav a{ text-decoration:none; color:var(--text); border:1px solid var(--border); padding:10px 14px; border-radius:999px; }
+    header{ text-align:center; padding:24px 0 10px; }
+    header img{ max-width:220px; margin-bottom:10px; }
+    h1{ margin:0; font-size:2rem; }
+    section{ background:var(--card); border:1px solid var(--border); border-radius:14px; padding:30px; margin-top:22px; box-shadow:0 10px 25px rgba(0,0,0,.35); }
+    h2{ margin-top:0; color:var(--accent); font-size:1.35rem; }
+    .row{ margin:12px 0; }
+    a{ color:var(--text); }
+    .btn{
+      display:inline-block;
+      margin-top:16px;
+      text-decoration:none;
+      padding:12px 18px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      color:var(--text);
+    }
+    .btn.primary{
+      background:rgba(201,164,107,.12);
+      border-color:rgba(201,164,107,.35);
+    }
+    footer{ text-align:center; color:var(--muted); margin-top:44px; font-size:.9rem; }
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <header>
+    <img src="logo complex.png" alt="Jabri Industrial Complex Logo">
+    <h1>Contact Us</h1>
+  </header>
+
+  <section>
+    <h2>Get in Touch</h2>
+
+    <div class="row">
+      <strong>Phone / WhatsApp:</strong> +962 XXXXXXXX
+    </div>
+
+    <div class="row">
+      <strong>Email:</strong> info@jabricomplex.com
+    </div>
+
+    <a class="btn primary" href="https://wa.me/962XXXXXXXX" target="_blank">
+      Message us on WhatsApp
+    </a>
+  </section>
+
+  <footer>© Jabri Industrial Complex – All rights reserved</footer>
+
+</div>
+</body>
+</html>
