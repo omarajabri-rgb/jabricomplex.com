@@ -4,33 +4,107 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us | Jabri Industrial Complex</title>
+
   <style>
     :root{
-      --bg:#0b0f14; --card:#121826; --text:#e8eef7;
-      --muted:#a9b4c0; --accent:#c9a46b; --border:rgba(255,255,255,.08);
+      --bg:#ffffff;
+      --card:#f6f7f9;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --accent:#c9a46b;
+      --border:#e5e7eb;
     }
+
     *{ box-sizing:border-box; }
+
     body{
       margin:0;
-      font-family:Arial,Helvetica,sans-serif;
-      background:linear-gradient(180deg,#0b0f14,#0e1624);
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
       color:var(--text);
       line-height:1.7;
     }
-    .wrap{ max-width:1000px; margin:0 auto; padding:28px 20px 70px; }
-    .nav{ display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin:10px 0 26px; }
-    .nav a{ text-decoration:none; color:var(--text); border:1px solid var(--border); padding:10px 14px; border-radius:999px; }
-    header{ text-align:center; padding:24px 0 10px; }
-    header img{ max-width:220px; margin-bottom:10px; }
-    h1{ margin:0; font-size:2rem; }
-    section{ background:var(--card); border:1px solid var(--border); border-radius:14px; padding:30px; margin-top:22px; box-shadow:0 10px 25px rgba(0,0,0,.35); }
-    h2{ margin-top:0; color:var(--accent); font-size:1.35rem; }
-    ul{ margin-left:18px; }
-    footer{ text-align:center; color:var(--muted); margin-top:44px; font-size:.9rem; }
+
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:30px 20px 70px;
+    }
+
+    .nav{
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      margin-bottom:30px;
+      flex-wrap:wrap;
+    }
+
+    .nav a{
+      text-decoration:none;
+      color:var(--text);
+      padding:10px 16px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      font-weight:500;
+    }
+
+    .nav a:hover{
+      background:#f1f1f1;
+    }
+
+    header{
+      text-align:center;
+      margin-bottom:28px;
+    }
+
+    header img{
+      max-width:240px;
+      margin-bottom:14px;
+    }
+
+    header h1{
+      margin:0;
+      font-size:2.1rem;
+    }
+
+    header p{
+      margin-top:8px;
+      color:var(--muted);
+    }
+
+    section{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:32px;
+      margin-bottom:28px;
+    }
+
+    h2{
+      margin-top:0;
+      color:var(--accent);
+      font-size:1.4rem;
+    }
+
+    ul{
+      margin:12px 0 0 20px;
+    }
+
+    li{
+      margin:6px 0;
+    }
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      margin-top:50px;
+      font-size:0.9rem;
+    }
   </style>
 </head>
 
 <body>
+
 <div class="wrap">
 
   <nav class="nav">
@@ -42,6 +116,7 @@
   <header>
     <img src="logo complex.png" alt="Jabri Industrial Complex Logo">
     <h1>About Us</h1>
+    <p>Learn more about Jabri Industrial Complex</p>
   </header>
 
   <section>
@@ -55,8 +130,8 @@
     <h2>What We Offer</h2>
     <ul>
       <li>Industrial and commercial units for rent</li>
-      <li>Storage spaces for business operations</li>
-      <li>Organized layout and professional environment</li>
+      <li>Storage spaces for various business needs</li>
+      <li>Organized site layout and professional environment</li>
       <li>Flexible rental options</li>
     </ul>
 
@@ -67,8 +142,11 @@
     </p>
   </section>
 
-  <footer>© Jabri Industrial Complex – All rights reserved</footer>
+  <footer>
+    © Jabri Industrial Complex – All rights reserved
+  </footer>
 
 </div>
+
 </body>
 </html>
