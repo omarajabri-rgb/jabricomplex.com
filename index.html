@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jabri Industrial Trading Complex</title>
+
+  <title>Jabri Industrial Complex | Industrial & Storage Units in Amman</title>
+
+  <meta name="description" content="Jabri Industrial Complex in Amman, Jordan offers industrial, storage, and business spaces for rent. Secure location, easy access, and professional management.">
+
+  <meta name="keywords" content="jabri, Jabri Industrial Complex, jabri complex, industrial complex Amman, storage units Jordan, warehouses Amman, business spaces Amman">
+
+  <meta name="author" content="Jabri Industrial Complex">
+  <meta name="robots" content="index, follow">
 
   <style>
     :root{
@@ -11,6 +19,7 @@
       --card:#f6f7f9;
       --text:#1f2937;
       --muted:#6b7280;
+      --accent:#c9a46b;
       --border:#e5e7eb;
     }
 
@@ -30,11 +39,12 @@
       padding:30px 20px 70px;
     }
 
+    /* NAV */
     .nav{
       display:flex;
       justify-content:center;
       gap:14px;
-      margin-bottom:28px;
+      margin-bottom:30px;
       flex-wrap:wrap;
     }
 
@@ -51,41 +61,51 @@
       background:#f1f1f1;
     }
 
+    /* LOGO */
     .logo{
       text-align:center;
-      margin:20px 0 14px;
+      margin:30px 0 20px;
     }
 
     .logo img{
       max-width:300px;
     }
 
-    .tagline{
+    /* HERO */
+    header{
       text-align:center;
-      color:var(--muted);
-      font-size:1.1rem;
-      letter-spacing:0.08em;
-      margin-bottom:26px;
+      margin-bottom:40px;
     }
 
-    .content{
+    header h1{
+      margin:0;
+      font-size:2.2rem;
+    }
+
+    header p{
+      margin-top:10px;
+      color:var(--muted);
+      max-width:700px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    section{
       background:var(--card);
       border:1px solid var(--border);
       border-radius:14px;
-      padding:28px;
-      margin-bottom:26px;
-      text-align:center;
+      padding:32px;
+      margin-bottom:30px;
     }
 
-    .content p{
-      margin:0;
+    h2{
+      margin-top:0;
+      color:var(--accent);
+      font-size:1.4rem;
     }
 
-    .hero img{
-      width:100%;
-      border-radius:14px;
-      border:1px solid var(--border);
-      margin-top:10px;
+    ul{
+      padding-left:18px;
     }
 
     footer{
@@ -98,9 +118,10 @@
 </head>
 
 <body>
+
 <div class="wrap">
 
-  <!-- NAVIGATION -->
+  <!-- NAV -->
   <nav class="nav">
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
@@ -109,31 +130,45 @@
 
   <!-- LOGO -->
   <div class="logo">
-    <img src="logo%20complex.png" alt="Jabri Industrial Trading Complex Logo">
+    <img src="logo complex.png" alt="Jabri Industrial Complex Logo">
   </div>
 
-  <!-- TAGLINE -->
-  <p class="tagline">MANAGED BUSINESS SPACES FOR LEASE</p>
-
-  <!-- HOME STATEMENT -->
-  <div class="content">
+  <!-- HERO -->
+  <header>
+    <h1>Jabri Industrial Complex</h1>
     <p>
-      Whether you’re expanding or relocating, Jabri Industrial Trading Complex provides a practical,
-      professionally managed environment for business operations. The complex offers industrial,
-      commercial, and storage spaces designed to support a range of business needs within a secure
-      and well-organized site.
+      A professionally managed industrial and storage complex in Amman, Jordan,
+      offering secure, accessible, and well-maintained business spaces.
     </p>
-  </div>
+  </header>
 
-  <!-- IMAGE -->
-  <div class="hero">
-    <img src="jabri%20complex%20image.jpeg" alt="Jabri Industrial Trading Complex">
-  </div>
+  <!-- ABOUT -->
+  <section>
+    <h2>About the Complex</h2>
+    <p>
+      Jabri Industrial Complex provides flexible industrial and storage units
+      designed to meet the needs of businesses looking for a reliable and
+      well-located facility in Amman.
+    </p>
+  </section>
+
+  <!-- FEATURES -->
+  <section>
+    <h2>What We Offer</h2>
+    <ul>
+      <li>Industrial and storage units</li>
+      <li>Secure and gated complex</li>
+      <li>Easy access for loading and transport</li>
+      <li>Professional management</li>
+      <li>Convenient location in Amman</li>
+    </ul>
+  </section>
 
   <footer>
-    © Jabri Industrial Trading Complex – All rights reserved
+    © Jabri Industrial Complex – All rights reserved
   </footer>
 
 </div>
+
 </body>
 </html>
