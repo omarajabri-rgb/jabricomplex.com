@@ -7,7 +7,7 @@
   <title>Jabri Industrial Complex | Industrial & Storage Units in Amman</title>
 
   <meta name="description" content="Jabri Industrial Complex in Amman, Jordan offers industrial, storage, and business spaces for rent. Secure location, easy access, and professional management.">
-  <meta name="keywords" content="jabri, Jabri Industrial Complex, industrial complex Amman, storage units Jordan, warehouses Amman, business spaces">
+  <meta name="keywords" content="jabri, Jabri Industrial Complex, jabri complex, industrial complex Amman, storage units Jordan, warehouses Amman, business spaces Amman">
   <meta name="author" content="Jabri Industrial Complex">
   <meta name="robots" content="index, follow">
 
@@ -17,124 +17,188 @@
       --card:#f6f7f9;
       --text:#1f2937;
       --muted:#6b7280;
+      --accent:#c9a46b;
       --border:#e5e7eb;
     }
+
+    *{ box-sizing:border-box; }
 
     body{
       margin:0;
       font-family:Arial, Helvetica, sans-serif;
       background:var(--bg);
       color:var(--text);
-      line-height:1.6;
+      line-height:1.7;
     }
 
-    .container{
+    .wrap{
       max-width:1100px;
-      margin:auto;
-      padding:20px;
+      margin:0 auto;
+      padding:30px 20px 70px;
     }
 
-    /* Navigation */
+    /* NAV (same pill style) */
     .nav{
       display:flex;
       justify-content:center;
-      gap:30px;
-      border-bottom:1px solid var(--border);
-      padding-bottom:15px;
+      gap:14px;
+      margin-bottom:30px;
+      flex-wrap:wrap;
     }
 
     .nav a{
       text-decoration:none;
       color:var(--text);
-      font-weight:600;
+      padding:10px 16px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      font-weight:500;
     }
 
     .nav a:hover{
-      color:#c9a46b;
+      background:#f1f1f1;
     }
 
-    /* Logo */
+    /* LOGO (same style) */
     .logo{
       text-align:center;
-      margin:20px 0 10px;
+      margin:30px 0 20px;
     }
 
     .logo img{
-      max-width:240px;
+      max-width:300px;
     }
 
-    /* Hero image */
-    .hero{
-      margin:30px 0;
+    header{
       text-align:center;
+      margin-bottom:30px;
     }
 
-    .hero img{
-      width:100%;
-      max-width:900px;
-      border-radius:6px;
+    header h1{
+      margin:0;
+      font-size:2.2rem;
     }
 
-    /* Intro */
-    .intro{
-      text-align:center;
-      max-width:800px;
-      margin:30px auto;
-    }
-
-    .intro h1{
-      margin-bottom:10px;
-    }
-
-    .intro p{
+    header p{
+      margin-top:10px;
       color:var(--muted);
-      font-size:18px;
+      max-width:820px;
+      margin-left:auto;
+      margin-right:auto;
+      font-size:1.05rem;
+    }
+
+    section{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:32px;
+      margin-bottom:30px;
+    }
+
+    h2{
+      margin-top:0;
+      color:var(--accent);
+      font-size:1.4rem;
+    }
+
+    /* Image */
+    .hero-img{
+      width:100%;
+      border-radius:12px;
+      margin-top:10px;
+    }
+
+    .note{
+      font-size:0.92rem;
+      color:var(--muted);
+      margin-top:10px;
+    }
+
+    /* Buttons */
+    .btn-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:16px;
+    }
+
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      padding:12px 18px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      color:var(--text);
+      font-weight:600;
+      background:#fff;
+    }
+
+    .btn.primary{
+      background:rgba(201,164,107,.18);
+      border-color:rgba(201,164,107,.45);
     }
 
     footer{
       text-align:center;
-      margin-top:60px;
-      padding:20px;
-      border-top:1px solid var(--border);
       color:var(--muted);
-      font-size:14px;
+      margin-top:50px;
+      font-size:0.9rem;
     }
   </style>
 </head>
 
 <body>
+  <div class="wrap">
 
-  <div class="container">
-
-    <div class="logo">
-      <img src="logo complex.png" alt="Jabri Industrial Complex Logo">
-    </div>
-
+    <!-- NAV -->
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact Us</a>
     </nav>
 
-    <div class="hero">
-      <img src="jabri complex image.jpeg" alt="Jabri Industrial Complex Overview">
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="logo complex.png" alt="Jabri Industrial Complex Logo">
     </div>
 
-    <div class="intro">
+    <!-- HEADER / INTRO -->
+    <header>
       <h1>Jabri Industrial Complex</h1>
       <p>
-        Jabri Industrial Complex is a professionally managed industrial and commercial
-        hub located in Amman, Jordan. We offer secure, flexible industrial, storage,
-        and business spaces designed to support growing companies and logistics needs.
+        Jabri Industrial Complex in Amman, Jordan offers industrial, storage, and business spaces for rent
+        in a secure and professionally managed environment.
       </p>
-    </div>
+    </header>
+
+    <!-- IMAGE SECTION (restored) -->
+    <section>
+      <h2>Project Layout (Concept Drawing)</h2>
+      <img src="jabri complex image.jpeg" alt="Jabri Industrial Complex Planning Sketch" class="hero-img">
+      <div class="note">
+        Conceptual architectural planning sketch for presentation purposes.
+      </div>
+    </section>
+
+    <!-- QUICK INFO -->
+    <section>
+      <h2>Quick Overview</h2>
+      <p>
+        Flexible spaces suitable for workshops, storage, and light business operations.
+        Easy access and a clear layout designed to support day-to-day business needs.
+      </p>
+
+      <div class="btn-row">
+        <a class="btn primary" href="about.html">Learn More</a>
+        <a class="btn" href="contact.html">Contact / Directions</a>
+      </div>
+    </section>
+
+    <footer>
+      © Jabri Industrial Complex – All rights reserved
+    </footer>
 
   </div>
-
-  <footer>
-    © 2026 Jabri Industrial Complex – Amman, Jordan
-  </footer>
-
 </body>
 </html>
-
