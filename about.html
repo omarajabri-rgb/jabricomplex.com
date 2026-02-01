@@ -68,6 +68,14 @@
       color:var(--accent); /* MATCH LOGO GOLD */
     }
 
+    /* ✅ About page only: resize the H1 to match home tagline size */
+    .about-page h1{
+      font-size:0.95rem;        /* change this number to resize */
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+      font-weight:600;
+    }
+
     section{
       background:var(--card);
       border:1px solid var(--border);
@@ -95,7 +103,7 @@
   </style>
 </head>
 
-<body>
+<body class="about-page">
 
 <div class="wrap">
 
