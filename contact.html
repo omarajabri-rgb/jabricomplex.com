@@ -1,131 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- SEO -->
   <title>Contact Jabri Industrial Trading Complex | Amman, Jordan</title>
+
   <meta name="description" content="Contact Jabri Industrial Trading Complex in Amman, Jordan. Managed industrial, commercial, and storage business spaces for lease." />
-  <meta name="keywords" content="jabri, Jabri Industrial Trading Complex, managed business spaces, industrial complex Amman, storage units Jordan, warehouses Amman" />
-  <meta name="author" content="Jabri Industrial Trading Complex" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://jabricomplex.com/contact.html" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Contact Jabri Industrial Trading Complex" />
-  <meta property="og:description" content="Managed business spaces for lease at Jabri Industrial Trading Complex in Amman, Jordan." />
-  <meta property="og:url" content="https://jabricomplex.com/contact.html" />
-  <meta property="og:site_name" content="Jabri Industrial Trading Complex" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Contact Jabri Industrial Trading Complex" />
-  <meta name="twitter:description" content="Managed business spaces for lease at Jabri Industrial Trading Complex in Amman, Jordan." />
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Jabri Industrial Trading Complex",
-    "url": "https://jabricomplex.com",
-    "description": "Managed industrial, commercial, and storage business spaces for lease in Amman, Jordan.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Amman",
-      "addressCountry": "JO"
-    }
-  }
-  </script>
 
   <style>
     :root{
-      --bg:#ffffff;
-      --card:#f6f7f9;
-      --text:#1f2937;
-      --muted:#6b7280;
-      --accent:#c9a46b;
-      --border:#e5e7eb;
+      --bg:#f7f4ed;
+      --bg-2:#fdfbf6;
+      --surface:rgba(255,255,255,0.82);
+      --surface-2:rgba(247,244,237,0.78);
+      --text:#2f2a24;
+      --muted:#7a6c59;
+      --gold:#c9a46b;
+      --gold-deep:#b18a52;
+      --border:rgba(201,164,107,0.18);
+      --shadow:0 14px 34px rgba(120,95,56,0.10);
+      --soft-shadow:0 10px 24px rgba(120,95,56,0.08);
+      --glass-bg:linear-gradient(135deg, rgba(255,255,255,0.92), rgba(247,244,237,0.84));
+      --card-bg:linear-gradient(135deg, rgba(255,255,255,0.86), rgba(247,244,237,0.74));
     }
 
-    *{ box-sizing:border-box; }
+    *{
+      box-sizing:border-box;
+      -webkit-tap-highlight-color:transparent;
+      font-family:Arial, Helvetica, sans-serif;
+    }
 
     body{
       margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      background:var(--bg);
+      background:
+        radial-gradient(circle at top left, rgba(201,164,107,0.12), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(177,138,82,0.08), transparent 24%),
+        linear-gradient(135deg, var(--bg), var(--bg-2));
       color:var(--text);
-      line-height:1.7;
+      line-height:1.8;
+      opacity:0;
+      transition:opacity .45s ease;
+    }
+
+    body.loaded{
+      opacity:1;
     }
 
     .wrap{
-      max-width:1100px;
+      max-width:1120px;
       margin:0 auto;
-      padding:30px 20px 70px;
+      padding:24px 18px 70px;
     }
 
-    /* NAV */
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+
+    .right-actions{
+      margin-left:auto;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .lang-switch,
+    .tenant-btn{
+      border:none;
+      text-decoration:none;
+      cursor:pointer;
+      border-radius:999px;
+      padding:11px 18px;
+      font-size:13px;
+      font-weight:800;
+      transition:.25s ease;
+      box-shadow:var(--soft-shadow);
+      white-space:nowrap;
+    }
+
+    .lang-switch{
+      background:rgba(255,255,255,0.72);
+      color:var(--text);
+      border:1px solid var(--border);
+    }
+
+    .tenant-btn{
+      background:linear-gradient(135deg, var(--gold), var(--gold-deep));
+      color:#fff;
+    }
+
     .nav{
       display:flex;
       justify-content:center;
       gap:14px;
-      margin-bottom:30px;
+      margin-bottom:26px;
       flex-wrap:wrap;
     }
 
     .nav a{
       text-decoration:none;
       color:var(--text);
-      padding:10px 16px;
+      padding:10px 18px;
       border-radius:999px;
       border:1px solid var(--border);
-      font-weight:500;
+      background:rgba(255,255,255,0.58);
+      font-weight:700;
+      transition:.25s ease;
     }
 
-    .nav a:hover{
-      background:#f1f1f1;
+    .nav a:hover,
+    .nav a.active{
+      background:rgba(201,164,107,0.14);
+      color:var(--gold-deep);
+      border-color:rgba(201,164,107,0.26);
     }
 
-    /* LOGO */
-    .logo{
+    .logo-box{
+      background:var(--glass-bg);
+      border:1px solid var(--border);
+      border-radius:30px;
+      padding:26px 22px;
+      box-shadow:var(--shadow);
       text-align:center;
-      margin:30px 0;
+      margin-bottom:24px;
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
     }
 
-    .logo img{
+    .logo-box img{
       max-width:300px;
+      width:100%;
+      filter:drop-shadow(0 10px 16px rgba(0,0,0,0.12));
     }
 
-    /* SAME STYLE AS ABOUT PAGE */
     .page-title{
       text-align:center;
-      font-size:0.95rem;
+      font-size:.95rem;
       letter-spacing:1.5px;
       text-transform:uppercase;
-      font-weight:600;
-      color:var(--accent);
-      margin-bottom:40px;
+      font-weight:800;
+      color:var(--gold-deep);
+      margin:18px 0 0;
     }
 
     section{
-      background:var(--card);
+      background:var(--card-bg);
       border:1px solid var(--border);
-      border-radius:14px;
+      border-radius:28px;
       padding:32px;
-      margin-bottom:30px;
+      margin-bottom:24px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
     }
 
     h2{
       margin-top:0;
-      color:var(--accent);
+      color:var(--gold-deep);
       font-size:1.4rem;
     }
 
-    /* FORM */
     form{
-      max-width:600px;
+      max-width:650px;
     }
 
     .field{
@@ -134,36 +175,34 @@
 
     input, textarea{
       width:100%;
-      padding:12px;
-      border-radius:8px;
-      border:1px solid var(--border);
+      padding:14px 15px;
+      border-radius:14px;
+      border:1px solid rgba(201,164,107,0.18);
+      background:rgba(255,255,255,0.74);
+      color:var(--text);
       font-size:14px;
+      outline:none;
     }
 
     textarea{
       resize:vertical;
-      min-height:120px;
+      min-height:130px;
     }
 
     button{
-      background:var(--accent);
-      color:#000;
+      background:linear-gradient(135deg, var(--gold), var(--gold-deep));
+      color:#fff;
       border:none;
-      padding:12px 20px;
-      border-radius:8px;
-      font-weight:600;
+      padding:13px 20px;
+      border-radius:14px;
+      font-weight:700;
       cursor:pointer;
     }
 
-    button:hover{
-      opacity:0.9;
-    }
-
-    /* MAP */
     iframe{
       width:100%;
       height:380px;
-      border-radius:12px;
+      border-radius:18px;
       border:0;
       margin-top:10px;
     }
@@ -173,72 +212,128 @@
       margin-top:15px;
       text-decoration:none;
       padding:12px 18px;
-      border-radius:8px;
-      border:1px solid var(--border);
-      font-weight:600;
-      color:#000;
-      background:var(--accent);
+      border-radius:14px;
+      border:1px solid rgba(201,164,107,0.22);
+      font-weight:700;
+      color:#fff;
+      background:linear-gradient(135deg, var(--gold), var(--gold-deep));
     }
 
     footer{
       text-align:center;
       color:var(--muted);
-      margin-top:50px;
-      font-size:0.9rem;
+      margin-top:34px;
+      font-size:.88rem;
+      font-weight:700;
+    }
+
+    [data-lang="ar"]{ display:none; }
+
+    body.lang-ar{
+      direction:rtl;
+      text-align:right;
+    }
+
+    body.lang-ar [data-lang="en"]{ display:none; }
+    body.lang-ar [data-lang="ar"]{ display:block; }
+    body.lang-ar .nav{
+      direction:rtl;
+    }
+    body.lang-ar .topbar{
+      direction:rtl;
+    }
+    body.lang-ar .right-actions{
+      margin-left:0;
+      margin-right:auto;
+    }
+    body.lang-ar section{
+      text-align:right;
+    }
+
+    @media (max-width:900px){
+      .topbar{
+        justify-content:center;
+      }
+      .right-actions{
+        margin-left:0;
+      }
+      body.lang-ar .right-actions{
+        margin-right:0;
+      }
     }
   </style>
 </head>
 
 <body>
-
 <div class="wrap">
 
-  <!-- NAV -->
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-  </nav>
+  <div class="topbar">
+    <div></div>
 
-  <!-- LOGO -->
-  <div class="logo">
-    <img src="logo complex.png" alt="Jabri Industrial Trading Complex Logo">
+    <div class="right-actions">
+      <button class="lang-switch" onclick="toggleLanguage()">AR / EN</button>
+      <a class="tenant-btn" href="https://app.jabricomplex.com">
+        <span data-lang="en">Tenant Login</span>
+        <span data-lang="ar">دخول المستأجرين</span>
+      </a>
+    </div>
   </div>
 
-  <!-- TEXT UNDER LOGO -->
-  <div class="page-title">MANAGED BUSINESS SPACES FOR LEASE</div>
+  <nav class="nav">
+    <a href="index.html">
+      <span data-lang="en">Home</span>
+      <span data-lang="ar">الرئيسية</span>
+    </a>
+    <a href="about.html">
+      <span data-lang="en">About Us</span>
+      <span data-lang="ar">من نحن</span>
+    </a>
+    <a class="active" href="contact.html">
+      <span data-lang="en">Contact Us</span>
+      <span data-lang="ar">اتصل بنا</span>
+    </a>
+  </nav>
 
-  <!-- CONTACT FORM -->
+  <div class="logo-box">
+    <img src="logo complex.png" alt="Jabri Industrial Trading Complex Logo">
+    <div class="page-title" data-lang="en">Managed Business Spaces for Lease</div>
+    <div class="page-title" data-lang="ar">مساحات أعمال مُدارة للإيجار</div>
+  </div>
+
   <section>
-    <h2>Send Us a Message</h2>
+    <h2 data-lang="en">Send Us a Message</h2>
+    <h2 data-lang="ar">أرسل لنا رسالة</h2>
 
     <form action="https://formsubmit.co/ojabri@hotmail.com" method="POST">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_subject" value="New inquiry from Jabri Industrial Trading Complex website">
 
       <div class="field">
-        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="text" name="name" placeholder="Full Name / الاسم الكامل" required>
       </div>
 
       <div class="field">
-        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="email" name="email" placeholder="Email Address / البريد الإلكتروني" required>
       </div>
 
       <div class="field">
-        <input type="text" name="phone" placeholder="Phone / WhatsApp">
+        <input type="text" name="phone" placeholder="Phone / WhatsApp / الهاتف أو واتساب">
       </div>
 
       <div class="field">
-        <textarea name="message" placeholder="Your message" required></textarea>
+        <textarea name="message" placeholder="Your message / رسالتك" required></textarea>
       </div>
 
-      <button type="submit">Send Message</button>
+      <button type="submit">
+        <span data-lang="en">Send Message</span>
+        <span data-lang="ar">إرسال الرسالة</span>
+      </button>
     </form>
   </section>
 
-  <!-- MAP -->
   <section>
-    <h2>Our Location – Jordan, Amman</h2>
+    <h2 data-lang="en">Our Location – Jordan, Amman</h2>
+    <h2 data-lang="ar">موقعنا – الأردن، عمّان</h2>
 
     <iframe
       src="https://www.google.com/maps?q=31.9863155,36.0016797&z=16&output=embed"
@@ -249,15 +344,29 @@
     <a class="btn"
        href="https://www.google.com/maps/dir/?api=1&destination=31.9863155,36.0016797"
        target="_blank">
-      Get Directions
+      <span data-lang="en">Get Directions</span>
+      <span data-lang="ar">الاتجاهات</span>
     </a>
   </section>
 
   <footer>
-    © Jabri Industrial Trading Complex – All rights reserved
+    <span data-lang="en">© Jabri Industrial Trading Complex – All rights reserved</span>
+    <span data-lang="ar">© مجمع جبري الصناعي التجاري – جميع الحقوق محفوظة</span>
   </footer>
 
 </div>
 
+<script>
+  function toggleLanguage() {
+    document.body.classList.toggle('lang-ar');
+    const isArabic = document.body.classList.contains('lang-ar');
+    document.documentElement.lang = isArabic ? 'ar' : 'en';
+    document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+  }
+
+  window.onload = () => {
+    document.body.classList.add('loaded');
+  }
+</script>
 </body>
 </html>
