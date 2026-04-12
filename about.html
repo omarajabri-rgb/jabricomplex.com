@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,23 +7,32 @@
 
   <style>
     :root{
-      --bg:#08111f;
-      --bg-2:#0c1628;
-      --gold:#d4af37;
-      --text:#ffffff;
-      --muted:#94a3b8;
-      --border:rgba(255,255,255,0.10);
-      --card-bg:linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-      --shadow:0 18px 40px rgba(0,0,0,0.28);
+      --bg:#f7f4ed;
+      --bg-2:#fdfbf6;
+      --surface:rgba(255,255,255,0.82);
+      --surface-2:rgba(247,244,237,0.78);
+      --text:#2f2a24;
+      --muted:#7a6c59;
+      --gold:#c9a46b;
+      --gold-deep:#b18a52;
+      --border:rgba(201,164,107,0.18);
+      --shadow:0 14px 34px rgba(120,95,56,0.10);
+      --soft-shadow:0 10px 24px rgba(120,95,56,0.08);
+      --glass-bg:linear-gradient(135deg, rgba(255,255,255,0.92), rgba(247,244,237,0.84));
+      --card-bg:linear-gradient(135deg, rgba(255,255,255,0.86), rgba(247,244,237,0.74));
     }
 
-    *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; font-family:Arial, Helvetica, sans-serif; }
+    *{
+      box-sizing:border-box;
+      -webkit-tap-highlight-color:transparent;
+      font-family:Arial, Helvetica, sans-serif;
+    }
 
     body{
       margin:0;
       background:
-        radial-gradient(circle at top right, rgba(212,175,55,0.10), transparent 20%),
-        radial-gradient(circle at bottom left, rgba(255,255,255,0.04), transparent 18%),
+        radial-gradient(circle at top left, rgba(201,164,107,0.12), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(177,138,82,0.08), transparent 24%),
         linear-gradient(135deg, var(--bg), var(--bg-2));
       color:var(--text);
       line-height:1.8;
@@ -31,100 +40,132 @@
       transition:opacity .45s ease;
     }
 
+    body.loaded{
+      opacity:1;
+    }
+
     .wrap{
       max-width:1120px;
       margin:0 auto;
-      padding:26px 20px 70px;
+      padding:24px 18px 70px;
     }
 
-    .top-right-bar{
+    .topbar{
       display:flex;
-      justify-content:flex-end;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
       margin-bottom:18px;
     }
 
+    .right-actions{
+      margin-left:auto;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .lang-switch,
     .tenant-btn{
+      border:none;
       text-decoration:none;
-      color:#0f172a;
-      padding:12px 20px;
+      cursor:pointer;
       border-radius:999px;
-      font-weight:700;
-      background:linear-gradient(135deg, var(--gold), #e4c35f);
-      box-shadow:0 10px 24px rgba(212,175,55,0.24);
-      transition:.28s ease;
+      padding:11px 18px;
+      font-size:13px;
+      font-weight:800;
+      transition:.25s ease;
+      box-shadow:var(--soft-shadow);
       white-space:nowrap;
     }
 
-    .tenant-btn:hover{
-      transform:translateY(-1px);
+    .lang-switch{
+      background:rgba(255,255,255,0.72);
+      color:var(--text);
+      border:1px solid var(--border);
+    }
+
+    .tenant-btn{
+      background:linear-gradient(135deg, var(--gold), var(--gold-deep));
+      color:#fff;
     }
 
     .nav{
       display:flex;
       justify-content:center;
       gap:14px;
-      margin-bottom:34px;
+      margin-bottom:26px;
       flex-wrap:wrap;
     }
 
     .nav a{
       text-decoration:none;
       color:var(--text);
-      padding:10px 20px;
+      padding:10px 18px;
       border-radius:999px;
       border:1px solid var(--border);
-      font-weight:600;
-      background:rgba(255,255,255,0.03);
-      transition:.3s;
+      background:rgba(255,255,255,0.58);
+      font-weight:700;
+      transition:.25s ease;
     }
 
     .nav a:hover,
     .nav a.active{
-      background:rgba(212,175,55,0.12);
-      color:var(--gold);
-      border-color:rgba(212,175,55,0.26);
+      background:rgba(201,164,107,0.14);
+      color:var(--gold-deep);
+      border-color:rgba(201,164,107,0.26);
     }
 
-    .logo{
+    .logo-box{
+      background:var(--glass-bg);
+      border:1px solid var(--border);
+      border-radius:30px;
+      padding:26px 22px;
+      box-shadow:var(--shadow);
       text-align:center;
-      margin:30px 0 20px;
+      margin-bottom:24px;
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
     }
 
-    .logo img{
+    .logo-box img{
       max-width:300px;
-      filter:drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+      width:100%;
+      filter:drop-shadow(0 10px 16px rgba(0,0,0,0.12));
     }
 
-    h1{
+    .page-title{
       text-align:center;
-      font-size:0.95rem;
+      font-size:.95rem;
       letter-spacing:1.5px;
       text-transform:uppercase;
-      font-weight:700;
-      color:var(--gold);
-      margin-bottom:40px;
+      font-weight:800;
+      color:var(--gold-deep);
+      margin:18px 0 0;
     }
 
     section{
       background:var(--card-bg);
       border:1px solid var(--border);
       border-radius:28px;
-      padding:34px;
-      margin-bottom:28px;
+      padding:32px;
+      margin-bottom:24px;
       box-shadow:var(--shadow);
-      backdrop-filter:blur(10px);
-      -webkit-backdrop-filter:blur(10px);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
     }
 
     h2{
       margin-top:0;
-      color:var(--gold);
+      color:var(--gold-deep);
       font-size:1.45rem;
     }
 
     p, li{
       color:var(--muted);
-      font-size:0.98rem;
+      font-size:.98rem;
     }
 
     ul{
@@ -138,8 +179,8 @@
     .sub-brand img{
       max-width:160px;
       margin-bottom:18px;
-      opacity:0.95;
-      filter:drop-shadow(0 10px 15px rgba(0,0,0,0.25));
+      opacity:.95;
+      filter:drop-shadow(0 10px 15px rgba(0,0,0,0.12));
     }
 
     .sub-brand p{
@@ -148,7 +189,7 @@
     }
 
     .sub-brand a.inline-link{
-      color:var(--gold);
+      color:var(--gold-deep);
       text-decoration:none;
       font-weight:700;
     }
@@ -161,8 +202,47 @@
     footer{
       text-align:center;
       color:var(--muted);
-      margin-top:60px;
-      font-size:0.9rem;
+      margin-top:34px;
+      font-size:.88rem;
+      font-weight:700;
+    }
+
+    [data-lang="ar"]{ display:none; }
+
+    body.lang-ar{
+      direction:rtl;
+      text-align:right;
+    }
+
+    body.lang-ar [data-lang="en"]{ display:none; }
+    body.lang-ar [data-lang="ar"]{ display:block; }
+    body.lang-ar .nav{
+      direction:rtl;
+    }
+    body.lang-ar .topbar{
+      direction:rtl;
+    }
+    body.lang-ar .right-actions{
+      margin-left:0;
+      margin-right:auto;
+    }
+    body.lang-ar section{
+      text-align:right;
+    }
+    body.lang-ar .sub-brand{
+      text-align:center;
+    }
+
+    @media (max-width:900px){
+      .topbar{
+        justify-content:center;
+      }
+      .right-actions{
+        margin-left:0;
+      }
+      body.lang-ar .right-actions{
+        margin-right:0;
+      }
     }
   </style>
 </head>
@@ -170,68 +250,123 @@
 <body>
 <div class="wrap">
 
-  <div class="top-right-bar">
-    <a class="tenant-btn" href="https://app.jabricomplex.com">دخول المستأجرين</a>
+  <div class="topbar">
+    <div></div>
+
+    <div class="right-actions">
+      <button class="lang-switch" onclick="toggleLanguage()">AR / EN</button>
+      <a class="tenant-btn" href="https://app.jabricomplex.com">
+        <span data-lang="en">Tenant Login</span>
+        <span data-lang="ar">دخول المستأجرين</span>
+      </a>
+    </div>
   </div>
 
   <nav class="nav">
-    <a href="index.html">Home</a>
-    <a class="active" href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
+    <a href="index.html">
+      <span data-lang="en">Home</span>
+      <span data-lang="ar">الرئيسية</span>
+    </a>
+    <a class="active" href="about.html">
+      <span data-lang="en">About Us</span>
+      <span data-lang="ar">من نحن</span>
+    </a>
+    <a href="contact.html">
+      <span data-lang="en">Contact Us</span>
+      <span data-lang="ar">اتصل بنا</span>
+    </a>
   </nav>
 
-  <div class="logo">
+  <div class="logo-box">
     <img src="logo complex.png" alt="Jabri Industrial Trading Complex Logo">
+    <div class="page-title" data-lang="en">Managed Business Spaces for Lease</div>
+    <div class="page-title" data-lang="ar">مساحات أعمال مُدارة للإيجار</div>
   </div>
 
-  <h1>Managed Business Spaces for Lease</h1>
-
   <section>
-    <h2>Who We Are</h2>
-    <p>
+    <h2 data-lang="en">Who We Are</h2>
+    <h2 data-lang="ar">من نحن</h2>
+
+    <p data-lang="en">
       Jabri Industrial Trading Complex is a professionally managed industrial and commercial complex located in Amman.
       It was established in <strong>1990</strong> with a clear vision by <strong>Mr. Adnan M’K Jabri</strong> to support
       <strong>small and medium-sized businesses</strong> by providing practical, well-organized, and accessible industrial and commercial spaces.
     </p>
-    <p>
+
+    <p data-lang="ar">
+      مجمع جبري الصناعي التجاري هو مجمع صناعي وتجاري مُدار باحتراف في عمّان، وقد تأسس عام <strong>1990</strong>
+      برؤية واضحة من <strong>السيد عدنان م.ك. جبري</strong> لدعم <strong>المشاريع الصغيرة والمتوسطة</strong>
+      عبر توفير مساحات عملية ومنظمة وسهلة الوصول.
+    </p>
+
+    <p data-lang="en">
       Since its establishment, the complex has served <strong>more than 300 individuals and businesses</strong>,
       offering a stable and reliable environment for long-term operations across various sectors.
     </p>
+
+    <p data-lang="ar">
+      ومنذ تأسيسه، خدم المجمع <strong>أكثر من 300 فرد وشركة</strong>، ووفّر بيئة مستقرة وموثوقة
+      للعمليات طويلة الأمد في قطاعات متعددة.
+    </p>
   </section>
 
   <section>
-    <h2>Ownership & Management</h2>
-    <p>
+    <h2 data-lang="en">Ownership & Management</h2>
+    <h2 data-lang="ar">الملكية والإدارة</h2>
+
+    <p data-lang="en">
       In <strong>2002</strong>, <strong>Omar A. Jabri</strong> joined the operation of the complex and became directly involved in its day-to-day management and development.
     </p>
-    <p>
+
+    <p data-lang="ar">
+      في عام <strong>2002</strong>، انضم <strong>عمر أ. جبري</strong> إلى تشغيل المجمع وأصبح منخرطًا بشكل مباشر
+      في الإدارة اليومية والتطوير.
+    </p>
+
+    <p data-lang="en">
       In <strong>2013</strong>, <strong>Omar A. Jabri</strong> assumed full responsibility as
       <strong>Owner, Chief Executive Officer, and Manager</strong> of Jabri Industrial Trading Complex.
     </p>
-    <p>
-      This continuity in ownership and leadership has ensured clear management, consistent standards, and a strong understanding of tenants’ operational needs over the years.
+
+    <p data-lang="ar">
+      وفي عام <strong>2013</strong>، تولّى <strong>عمر أ. جبري</strong> المسؤولية الكاملة بصفته
+      <strong>المالك والرئيس التنفيذي والمدير</strong> لمجمع جبري الصناعي التجاري.
     </p>
   </section>
 
   <section>
-    <h2>What We Offer</h2>
-    <ul>
+    <h2 data-lang="en">What We Offer</h2>
+    <h2 data-lang="ar">ماذا نقدم</h2>
+
+    <ul data-lang="en">
       <li>Industrial and commercial units for rent</li>
       <li>Storage spaces for various business needs</li>
       <li>Flexible unit layouts suitable for different activities</li>
       <li>A secure, organized, and professionally managed environment</li>
       <li>Flexible rental options designed to support business continuity</li>
     </ul>
+
+    <ul data-lang="ar">
+      <li>وحدات صناعية وتجارية للإيجار</li>
+      <li>مساحات تخزين لمختلف احتياجات الأعمال</li>
+      <li>توزيعات مرنة للوحدات تناسب أنشطة متعددة</li>
+      <li>بيئة آمنة ومنظمة ومُدارة باحتراف</li>
+      <li>خيارات إيجار مرنة تدعم استمرارية الأعمال</li>
+    </ul>
   </section>
 
   <section>
-    <h2>Our Vision</h2>
-    <p>
+    <h2 data-lang="en">Our Vision</h2>
+    <h2 data-lang="ar">رؤيتنا</h2>
+
+    <p data-lang="en">
       To create a reliable industrial and trading complex that supports business growth through
       <strong>practical spaces</strong>, <strong>clear management</strong>, and <strong>long-term partnerships</strong>.
     </p>
-    <p>
-      This vision continues to guide how the complex is owned, managed, and maintained today.
+
+    <p data-lang="ar">
+      بناء مجمع صناعي وتجاري موثوق يدعم نمو الأعمال من خلال
+      <strong>مساحات عملية</strong> و<strong>إدارة واضحة</strong> و<strong>شراكات طويلة الأمد</strong>.
     </p>
   </section>
 
@@ -239,10 +374,15 @@
     <a href="https://www.labrioche.co" target="_blank" rel="noopener">
       <img src="logo.jpg" alt="La Brioche Chocolate Company Logo">
     </a>
+
     <h2>La Brioche</h2>
-    <p>
+
+    <p data-lang="en">
       La Brioche is a family-run chocolate and confectionery business developed and operated within the Jabri business ecosystem.
-      The brand reflects hands-on experience in manufacturing, product development, and day-to-day operations.
+    </p>
+
+    <p data-lang="ar">
+      لا بريوش هو مشروع عائلي في مجال الشوكولاتة والحلويات، تم تطويره وتشغيله ضمن منظومة أعمال جبري.
     </p>
   </section>
 
@@ -250,25 +390,40 @@
     <a href="https://www.la-gache.com" target="_blank" rel="noopener">
       <img src="lagache%20logo.png" alt="LA GÂCHE Logo">
     </a>
+
     <h2>LA GÂCHE</h2>
-    <p>
+
+    <p data-lang="en">
       LA GÂCHE is a family-run gourmet food catering business developed and operated within the Jabri business ecosystem.
       <br><br>
       <a class="inline-link" href="https://www.la-gache.com" target="_blank" rel="noopener">Visit www.la-gache.com</a>
     </p>
+
+    <p data-lang="ar">
+      لا غاش هو مشروع عائلي في مجال الضيافة والطعام الفاخر تم تطويره وتشغيله ضمن منظومة أعمال جبري.
+      <br><br>
+      <a class="inline-link" href="https://www.la-gache.com" target="_blank" rel="noopener">زيارة www.la-gache.com</a>
+    </p>
   </section>
 
   <footer>
-    © Jabri Industrial Trading Complex – All rights reserved
+    <span data-lang="en">© Jabri Industrial Trading Complex – All rights reserved</span>
+    <span data-lang="ar">© مجمع جبري الصناعي التجاري – جميع الحقوق محفوظة</span>
   </footer>
 
 </div>
 
 <script>
+  function toggleLanguage() {
+    document.body.classList.toggle('lang-ar');
+    const isArabic = document.body.classList.contains('lang-ar');
+    document.documentElement.lang = isArabic ? 'ar' : 'en';
+    document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+  }
+
   window.onload = () => {
-    document.body.style.opacity = "1";
+    document.body.classList.add('loaded');
   }
 </script>
-
 </body>
 </html>
