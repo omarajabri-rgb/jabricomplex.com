@@ -1,268 +1,283 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us | Jabri Industrial Trading Complex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+
+  <title>مجمع جبري الصناعي التجاري | وحدات صناعية وتجارية ومستودعات في عمّان</title>
+
+  <meta name="description" content="مجمع جبري الصناعي التجاري في عمّان، الأردن. وحدات صناعية وتجارية ومستودعات للإيجار ضمن بيئة منظمة وآمنة وإدارة احترافية.">
+  <meta name="keywords" content="مجمع جبري, Jabri Complex, Jabri Industrial Complex, industrial complex Amman, storage units Jordan, warehouses Amman, business spaces Amman">
+  <meta name="author" content="Jabri Industrial Complex">
+  <meta name="robots" content="index, follow">
 
   <style>
-    :root{
-      --bg:#ffffff;
-      --card:#f6f7f9;
-      --text:#1f2937;
-      --muted:#6b7280;
-      --accent:#c9a46b; /* logo gold */
-      --border:#e5e7eb;
+    :root {
+      --bg: #08111f;
+      --navy: #0f172a;
+      --navy-2: #111c2f;
+      --gold: #d4af37;
+      --gold-soft: rgba(212,175,55,0.14);
+      --text: #ffffff;
+      --muted: #94a3b8;
+      --border: rgba(255,255,255,0.10);
+      --card-bg: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+      --shadow: 0 18px 40px rgba(0,0,0,0.28);
     }
 
-    *{ box-sizing:border-box; }
-
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.7;
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    .wrap{
-      max-width:1100px;
-      margin:0 auto;
-      padding:30px 20px 70px;
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top right, rgba(212,175,55,0.10), transparent 20%),
+        radial-gradient(circle at bottom left, rgba(255,255,255,0.04), transparent 18%),
+        linear-gradient(135deg, var(--bg), var(--navy));
+      color: var(--text);
+      line-height: 1.8;
+      opacity: 0;
+      transition: opacity 0.45s ease;
     }
 
-    .nav{
-      display:flex;
-      justify-content:center;
-      gap:14px;
-      margin-bottom:30px;
-      flex-wrap:wrap;
+    .wrap {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 28px 20px 70px;
     }
 
-    .nav a{
-      text-decoration:none;
-      color:var(--text);
-      padding:10px 16px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      font-weight:500;
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
     }
 
-    .nav a:hover{
-      background:#f1f1f1;
+    .brand-mini {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
     }
 
-    .logo{
-      text-align:center;
-      margin:30px 0;
+    .tenant-btn {
+      text-decoration: none;
+      color: var(--navy);
+      background: linear-gradient(135deg, var(--gold), #e2c15b);
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      box-shadow: 0 10px 24px rgba(212,175,55,0.24);
+      transition: 0.25s ease;
+      white-space: nowrap;
     }
 
-    .logo img{
-      max-width:300px;
+    .tenant-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 28px rgba(212,175,55,0.28);
     }
 
-    h1{
-      text-align:center;
-      font-size:2.3rem;
-      margin-bottom:40px;
-      color:var(--accent);
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 34px;
+      flex-wrap: wrap;
     }
 
-    .about-page h1{
-      font-size:0.95rem;
-      letter-spacing:1.5px;
-      text-transform:uppercase;
-      font-weight:600;
+    .nav a {
+      text-decoration: none;
+      color: var(--text);
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-weight: 600;
+      background: rgba(255,255,255,0.03);
+      transition: 0.28s;
     }
 
-    section{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:14px;
-      padding:36px;
-      margin-bottom:30px;
+    .nav a:hover,
+    .nav a.active {
+      background: var(--gold-soft);
+      color: var(--gold);
+      border-color: rgba(212,175,55,0.34);
     }
 
-    h2{
-      margin-top:0;
-      color:var(--accent);
-      font-size:1.5rem;
+    header {
+      text-align: center;
+      margin-bottom: 34px;
     }
 
-    ul{
-      padding-left:20px;
+    header img {
+      max-width: 300px;
+      margin-bottom: 16px;
+      filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
     }
 
-    footer{
-      text-align:center;
-      color:var(--muted);
-      margin-top:60px;
-      font-size:0.9rem;
+    .tagline {
+      font-size: 0.88rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+      font-weight: 700;
     }
 
-    /* Sub brand section */
-    .sub-brand{
-      text-align:center;
+    .hero-title {
+      margin: 0 0 14px;
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #fff;
     }
 
-    .sub-brand img{
-      max-width:160px;
-      margin-bottom:18px;
-      opacity:0.9;
+    header p {
+      margin: 0 auto;
+      max-width: 840px;
+      color: var(--muted);
+      font-size: 1.02rem;
+      line-height: 1.9;
     }
 
-    .sub-brand p{
-      max-width:720px;
-      margin:0 auto;
-      color:#444;
-      font-size:0.95rem;
+    section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 22px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
 
-    /* Link inside sub-brand paragraph */
-    .sub-brand a.inline-link{
-      color:var(--accent);
-      text-decoration:none;
-      font-weight:600;
+    .layout-img {
+      width: 100%;
+      border-radius: 20px;
+      display: block;
     }
-    .sub-brand a.inline-link:hover{
-      text-decoration:underline;
-      text-underline-offset:6px;
+
+    .note {
+      font-size: 0.85rem;
+      color: var(--gold);
+      margin-top: 15px;
+      font-weight: 600;
+      padding: 0 6px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .info-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .info-card h3 {
+      margin: 0 0 8px;
+      color: var(--gold);
+      font-size: 1.05rem;
+    }
+
+    .info-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 900px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        justify-content: center;
+      }
     }
   </style>
 </head>
-
-<body class="about-page">
+<body>
 
 <div class="wrap">
 
-  <!-- NAVIGATION -->
+  <div class="topbar">
+    <div class="brand-mini">Managed Business Spaces for Lease</div>
+    <a class="tenant-btn" href="https://app.jabricomplex.com">دخول المستأجرين</a>
+  </div>
+
   <nav class="nav">
-    <a href="index.html">Home</a>
+    <a class="active" href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="contact.html">Contact Us</a>
   </nav>
 
-  <!-- LOGO -->
-  <div class="logo">
-    <img src="logo complex.png" alt="Jabri Industrial Trading Complex Logo">
-  </div>
+  <header>
+    <img src="logo complex.png" alt="Jabri Industrial Complex Logo">
 
-  <!-- PAGE TITLE -->
-  <h1>Managed Business Spaces for Lease</h1>
+    <div class="tagline">Managed Business Spaces for Lease</div>
+    <h1 class="hero-title">Jabri Industrial Trading Complex</h1>
 
-  <!-- WHO WE ARE -->
+    <p>
+      A professionally managed industrial, commercial, and storage complex in Amman, Jordan,
+      offering secure, accessible, and well-maintained business spaces within an organized
+      and professionally managed environment.
+    </p>
+  </header>
+
   <section>
-    <h2>Who We Are</h2>
-
-    <p>
-      Jabri Industrial Trading Complex is a professionally managed industrial and commercial
-      complex located in Amman. It was established in <strong>1990</strong> with a clear vision
-      by <strong>Mr. Adnan M’K Jabri</strong> to support <strong>small and medium-sized businesses</strong>
-      by providing practical, well-organized, and accessible industrial and commercial spaces.
-    </p>
-
-    <p>
-      Since its establishment, the complex has served
-      <strong>more than 300 individuals and businesses</strong>, offering a stable and reliable
-      environment for long-term operations across various sectors.
-    </p>
+    <img src="jabri complex image.jpeg" class="layout-img" alt="Jabri Industrial Complex layout" loading="lazy">
+    <div class="note">
+      Conceptual architectural planning sketch.
+    </div>
   </section>
 
-  <!-- OWNERSHIP & MANAGEMENT -->
   <section>
-    <h2>Ownership & Management</h2>
-
-    <p>
-      In <strong>2002</strong>, <strong>Omar A. Jabri</strong> joined the operation of the complex
-      and became directly involved in its day-to-day management and development.
-    </p>
-
-    <p>
-      In <strong>2013</strong>, <strong>Omar A. Jabri</strong> assumed full responsibility as
-      <strong>Owner, Chief Executive Officer, and Manager</strong> of Jabri Industrial Trading Complex.
-    </p>
-
-    <p>
-      This continuity in ownership and leadership has ensured clear management, consistent standards,
-      and a strong understanding of tenants’ operational needs over the years.
-    </p>
-  </section>
-
-  <!-- WHAT WE OFFER -->
-  <section>
-    <h2>What We Offer</h2>
-
-    <ul>
-      <li>Industrial and commercial units for rent</li>
-      <li>Storage spaces for various business needs</li>
-      <li>Flexible unit layouts suitable for different activities</li>
-      <li>A secure, organized, and professionally managed environment</li>
-      <li>Flexible rental options designed to support business continuity</li>
-    </ul>
-  </section>
-
-  <!-- VISION -->
-  <section>
-    <h2>Our Vision</h2>
-
-    <p>
-      To create a reliable industrial and trading complex that supports business growth through
-      <strong>practical spaces</strong>, <strong>clear management</strong>, and
-      <strong>long-term partnerships</strong>.
-    </p>
-
-    <p>
-      This vision continues to guide how the complex is owned, managed, and maintained today.
-    </p>
-  </section>
-
-  <!-- LA BRIOCHE -->
-  <section class="sub-brand">
-    <a href="https://www.labrioche.co" target="_blank" rel="noopener">
-      <img src="logo.jpg" alt="La Brioche Chocolate Company Logo">
-    </a>
-
-    <h2>La Brioche</h2>
-
-    <p>
-      La Brioche is a family-run chocolate and confectionery business developed and operated within
-      the Jabri business ecosystem. The brand reflects hands-on experience in manufacturing, product
-      development, and day-to-day operations, combining traditional craftsmanship with practical,
-      modern business practices. Through its growth, La Brioche represents a real, working example
-      of how businesses are built, managed, and scaled—shaped by direct involvement in production,
-      logistics, branding, and market execution.
-    </p>
-  </section>
-
-  <!-- LA GÂCHE -->
-  <section class="sub-brand">
-    <a href="https://www.la-gache.com" target="_blank" rel="noopener">
-      <img src="lagache%20logo.png" alt="LA GÂCHE Logo">
-
-    </a>
-
-    <h2>LA GÂCHE</h2>
-
-    <p>
-      LA GĂCHE is a family-run gourmet food catering business developed and operated within the Jabri business ecosystem.
-      The brand reflects hands-on experience in culinary manufacturing, professional menu development, and high-scale
-      day-to-day operations, combining traditional gastronomic craftsmanship with practical, modern business practices.
-      <br><br>
-      Through its growth, LA GĂCHE represents a real, working example of how luxury service brands are built, managed,
-      and scaled—shaped by direct involvement in premium production, logistics, sophisticated branding, and precise
-      market execution. By leveraging the deep-rooted expertise of the Jabri commercial legacy, the brand delivers an
-      elite catering experience that is as operationally sound as it is culinary-refined.
-      <br><br>
-      <a class="inline-link" href="https://www.la-gache.com" target="_blank" rel="noopener">Visit www.la-gache.com</a>
-    </p>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>Industrial Units</h3>
+        <p>Practical spaces designed for a wide range of industrial activities and business operations.</p>
+      </div>
+      <div class="info-card">
+        <h3>Commercial Spaces</h3>
+        <p>Flexible units suitable for trading, workshops, showrooms, and daily business needs.</p>
+      </div>
+      <div class="info-card">
+        <h3>Storage Solutions</h3>
+        <p>Secure and accessible storage spaces with organized management and reliable access.</p>
+      </div>
+    </div>
   </section>
 
   <footer>
-    © Jabri Industrial Trading Complex – All rights reserved
+    © JABRI INDUSTRIAL TRADING COMPLEX – ALL RIGHTS RESERVED
   </footer>
 
 </div>
 
+<script>
+  window.onload = () => {
+    document.body.style.opacity = "1";
+  }
+</script>
+
 </body>
 </html>
-
